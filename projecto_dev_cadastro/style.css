@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #750375;
+    box-sizing: border-box;
+    border-radius: 6px;
+    transition: all 1s;
+}
+
+body{
+    background: linear-gradient(to bottom, #a6dac889, #daa6d0d8) no-repeat;
+    background-size: contain;
+}
+
+header{
+    text-align: center;
+}
+header > h1{
+    font-weight: bold;
+}
+header > p{
+    padding-bottom: 15px;
+}
+
+main{
+    background-color: #a6dac82d;
+    width: 350px;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 14px;
+    border: 1px solid rgba(119, 115, 115, 0.425);
+}
+
+fieldset{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+fieldset#dadospessoais{
+    text-align: left;
+    height: 280px;
+}
+
+input.campo_pessoal{
+    font-size: 1em;
+    width: 100%;
+    height: 2em;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+input#datanascimento{
+    text-align: center;
+    font-size: 1em;
+}
+
+main h2{
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+fieldset.opcoes label{
+    display: inline-block;
+    padding: 2px 0px;
+}
+
+div#senioridade{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px;
+}
+div#senioridade > select{
+    height: 2em;
+    width: 50%;
+}
+
+div#div_texto > label{
+    display: inline-block;
+    padding: 15px;
+}
+
+div#div_texto > textarea{
+    font-size: 1em;
+    padding: 10px;
+    width: 100%;
+}
+div#concluido{
+    margin: 10px auto;
+    height: 3em;
+    width: 50%;
+}
+
+div#concluido > input{
+    background-color: #750375d7;
+    color: rgb(240, 230, 212);
+    font-size: 1.5em;
+    height: 100%;
+    width: 100%;
+}
