@@ -4,101 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro DEV's</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
+    <header>
+        <h1>Cadastro de DEV's Web</h1>
+    </header>
     <main>
-        <header>
-            <h1>Cadastro de DEV's</h1>
-            <p>Complete as suas informações</p>
-        </header>
-
-        <form action="cadastro.py" method="post">
-            <fieldset id="dadospessoais">
-                <legend>Dados Pessoais</legend>
-                <div>
-                    <label for="nome">Nome</label>
-                    <input class="campo_pessoal" type="text" name="nome" id="nome">
-                </div>
-
-                <div>
-                    <label for="sobrenome">Sobrenome</label>
-                    <input class="campo_pessoal" type="text" name="sobrenome" id="sobrenome">
-                </div>
-
-                <div>
-                    <label for="datanascimento">Data de nascimento</label>
-                    <input class="campo_pessoal" type="date" name="datanascimento" id="datanascimento">
-                </div>
-
-                <div>
-                    <label for="email">Email</label>
-                    <input class="campo_pessoal" type="email" name="email" id="email">
-                </div>
-            </fieldset>
-
-            <h2>De que lado voce desenvolve?</h2>
-            <fieldset class="opcoes">
-                <legend>Opções</legend>
-                <div>
-                    <input type="radio" name="dev" id="devfont" value="font-hand" checked>
-                    <label for="devfont">Front-Hend</label>
-
-                    <input type="radio" name="dev" id="devback" value="back-hand">
-                    <label for="devback">Back-Hand</label>
-                    
-                    <input type="radio" name="dev" id="devfull" value="full-stack">
-                    <label for="devfull">Full-Stack</label>
-                </div>
-            </fieldset>
-
-            <h2>Quais tecnologias utiliza?</h2>
-            <div>
-                <fieldset class="opcoes">
-                    <legend>Opções</legend>
-                    <input type="checkbox" name="thtml" id="thtml" value="HTML">
-                    <label for="thtml">HTML</label>
-
-                    <input type="checkbox" name="tcss" id="tcss" value="CSS">
-                    <label for="tcss">CSS</label>
-
-                    <input type="checkbox" name="tjavascript" id="tjavascript" value="JavaScript">
-                    <label for="tjavascript">JavaScript</label>
-
-                    <input type="checkbox" name="tphp" id="tphp" value="PHP">
-                    <label for="tphp">PHP</label>
-
-                    <input type="checkbox" name="tpython" id="tpython" value="Python">
-                    <label for="tpython">Python</label>
-
-                    <input type="checkbox" name="tc#" id="tc#" value="C#">
-                    <label for="tc#">C#</label>
-
-                    <input type="checkbox" name="tjava" id="tjava" value="Java">
-                    <label for="tjava">Java</label>
-                </fieldset>
+        <fieldset id="dPessoais">
+            <legend>Dados pessoais</legend>
+            <div class="campo">
+                <label for="nomeCompleto">Nome completo: </label><br>
+                <input type="text" name="nomeCompleto" id="nomeCompleto">
             </div>
-            
-            <div id="senioridade">
-                <label for="nivel">Senioridade</label>
-                <select name="nivel" id="nivel">
-                    <option selected disabled>Selecione...</option>
-                    <option value="junior">Junior</option>
-                    <option value="pleno">Pleno</option>
-                    <option value="senior">Senior</option>
+            <div class="campo">
+                <label for="nBilhete">Nº do Bilhete: </label><br>
+                <input type="text" name="nBilhete" id="nBilhete" placeholder="  XXX XXX XXX UE XXX">
+            </div>
+            <div class="campo">
+                <label for="prov">Naturalidade: </label>
+                <select name="prov" id="prov">
+                    <option selected disabled>Província...</option>
+                    <option value="CN">Cuanza Norte</option>
+                    <option value="BE">Benguela</option>
+                    <option value="LD">Luanda</option>
+                    <option value="UE">Uíge</option>
+                    <option value="ZE">Zaíre</option>
                 </select>
             </div>
+            <div class="campo">
+                <label for="dataNasc">Data de nascimento</label>
+                <input type="date" name="dataNasc" id="dataNasc">
+            </div>
+            <div class="campo">
+                <label>Sexo:</label>
+                <input type="radio" name="sexo" id="sexoM">
+                <label for="sexoM">Masculino</label>
+                <input type="radio" name="sexo" id="sexoF">
+                <label for="sexoF">Feminino</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados profissionais</legend>
+            <section>
+                <legend>De que lado você desenvolve</legend>
+                <fieldset class="opcao">
+                    <legend>Opções</legend>
 
-            <div id="div_texto">
-                <label for="texto">Fale um pouco dos seus desafios como desenvolvedor:</label>
-                <br>
-                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Esreva a sua mensagem aqui..."></textarea>
-            </div>
-            
-            <div id="concluido">
-                <input type="submit" value="Concluido">
-            </div>
-        </form>
+                    <input type="radio" name="tipoDev" id="tipoDevFront">
+                    <label for="tipoDevFront">Front-Hand</label>
+                    
+                    <input type="radio" name="tipoDev" id="tipoDevBack">
+                    <label for="tipoDevBack">Back-Hand</label>
+                    
+                    <input type="radio" name="tipoDev" id="tipoDevFull">
+                    <label for="tipoDevFull">Full-Stack</label>
+
+                </fieldset>
+                <legend>Quais tecnologias utiliza</legend>
+                <fieldset class="opcao">
+                    <legend>Opções</legend>
+                    
+                    <input type="checkbox" name="tecnoHTML" id="tecnoHTML">
+                    <label for="tecnoHTML">HTML</label>
+
+                    <input type="checkbox" name="tecnoCSS" id="tecnoCSS">
+                    <label for="tecnoCSS">CSS</label>
+
+                    <input type="checkbox" name="tecnoJS" id="tecnoJS">
+                    <label for="tecnoJS">JavaScript</label>
+
+                    <input type="checkbox" name="tecnoPHP" id="tecnoPHP">
+                    <label for="tecnoPHP">PHP</label>
+
+                    <input type="checkbox" name="tecnoPY" id="tecnoPY">
+                    <label for="tecnoPY">Python</label>
+
+                    <input type="checkbox" name="tecnoC#" id="tecnoC#">
+                    <label for="tecnoC#">C#</label>
+
+                    <input type="checkbox" name="tecnoJava" id="tecnoJava">
+                    <label for="tecnoJava">Java</label>
+
+                    <input type="button" value="Outras" onclick="outrastecnologias()">
+                    <input type="text" id="outrastec">
+                </fieldset>
+                <div class="campo">
+                    <label for="sen">Senioridade</label>
+                    <select name="sen" id="sen">
+                        <option selected disabled>Selecione...</option>
+                        <option value="senJun">Junior</option>
+                        <option value="senPle">Pleno</option>
+                        <option value="senSen">Senior</option>
+                    </select>
+                </div>
+            </section>
+        </fieldset>
+        <input type="button" value="Fazer Cadastro" id="FC" onclick="fazercadastro()">
+        <script src="script/script.js"></script>
     </main>
 </body>
 </html>
