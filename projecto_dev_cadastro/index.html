@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro DEV's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Cadastro de DEV's</h1>
+            <p>Complete as suas informações</p>
+        </header>
+
+        <form action="cadastro.py" method="post">
+            <fieldset id="dadospessoais">
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="nome">Nome</label>
+                    <input class="campo_pessoal" type="text" name="nome" id="nome">
+                </div>
+
+                <div>
+                    <label for="sobrenome">Sobrenome</label>
+                    <input class="campo_pessoal" type="text" name="sobrenome" id="sobrenome">
+                </div>
+
+                <div>
+                    <label for="datanascimento">Data de nascimento</label>
+                    <input class="campo_pessoal" type="date" name="datanascimento" id="datanascimento">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input class="campo_pessoal" type="email" name="email" id="email">
+                </div>
+            </fieldset>
+
+            <h2>De que lado voce desenvolve?</h2>
+            <fieldset class="opcoes">
+                <legend>Opções</legend>
+                <div>
+                    <input type="radio" name="dev" id="devfont" value="font-hand" checked>
+                    <label for="devfont">Front-Hend</label>
+
+                    <input type="radio" name="dev" id="devback" value="back-hand">
+                    <label for="devback">Back-Hand</label>
+                    
+                    <input type="radio" name="dev" id="devfull" value="full-stack">
+                    <label for="devfull">Full-Stack</label>
+                </div>
+            </fieldset>
+
+            <h2>Quais tecnologias utiliza?</h2>
+            <div>
+                <fieldset class="opcoes">
+                    <legend>Opções</legend>
+                    <input type="checkbox" name="thtml" id="thtml" value="HTML">
+                    <label for="thtml">HTML</label>
+
+                    <input type="checkbox" name="tcss" id="tcss" value="CSS">
+                    <label for="tcss">CSS</label>
+
+                    <input type="checkbox" name="tjavascript" id="tjavascript" value="JavaScript">
+                    <label for="tjavascript">JavaScript</label>
+
+                    <input type="checkbox" name="tphp" id="tphp" value="PHP">
+                    <label for="tphp">PHP</label>
+
+                    <input type="checkbox" name="tpython" id="tpython" value="Python">
+                    <label for="tpython">Python</label>
+
+                    <input type="checkbox" name="tc#" id="tc#" value="C#">
+                    <label for="tc#">C#</label>
+
+                    <input type="checkbox" name="tjava" id="tjava" value="Java">
+                    <label for="tjava">Java</label>
+                </fieldset>
+            </div>
+            
+            <div id="senioridade">
+                <label for="nivel">Senioridade</label>
+                <select name="nivel" id="nivel">
+                    <option selected disabled>Selecione...</option>
+                    <option value="junior">Junior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+
+            <div id="div_texto">
+                <label for="texto">Fale um pouco dos seus desafios como desenvolvedor:</label>
+                <br>
+                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Esreva a sua mensagem aqui..."></textarea>
+            </div>
+            
+            <div id="concluido">
+                <input type="submit" value="Concluido">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
