@@ -45,3 +45,6 @@
 	3- E um rodapé que contém alguns link's extras e informações do autor.
 
 	A html 5 nos ajuda muito nesta organização com as tag's: <header>, <main> e <footer> representando respectivamente o que mencionamos à cima.
+===========================================
+		FUNÇÔES
+	-> overflow: hidden;-> Faz com que o conteudo colocado em uma caixa fique absolutamente dentro desta.
