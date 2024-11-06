@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'padrao';
+    src: url(../fontes/MPLUSRounded1c-Light.ttf), arial;
+}
+@font-face {
+    font-family: 'titulos';
+    src: url(../fontes/MPLUSRounded1c-ExtraBold.ttf), arial;
+}
+
+:root{
+    --fontP: 'padrao';
+    --fontT: 'titulos';
+
+    --corDarckBlue: #2c3540;
+    --corTexto: #c4ddf2;
+    --corFundo: #2c3540af;
+    --corDarckGreen: #03a6a6a2;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: var(--corTexto);
+    
+    transition: 1s;
+}
+
+body{
+    background: var(--corDarckBlue) url(../img/web.jpg) no-repeat center center fixed;
+    background-size: cover;
+    font-family: var(--fontP);
+}
+
+header{
+    padding: 10px;
+    text-align: center;
+    font-family: var(--fontT);
+}
+header > h1{
+    text-shadow: 1px 0px 6px #000000;
+    font-size: 1.6;
+}
+
+main{
+    background: var(--corFundo);
+    border-radius: 15px;
+    box-shadow: 0px 0px 6px 0px var(--corDarckGreen);
+    padding: 15px;
+    margin: 10px auto;
+    width: 96vw;
+    
+    position: relative;
+}
+
+fieldset{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #c4ddf26e;
+}
+fieldset#dPessoais{
+    display: flex;
+    flex-flow: row wrap;
+}
+fieldset.opcao{
+    text-align: center;
+}
+
+div.campo{
+    padding: 5px;
+    width: 100%;
+    flex: auto;
+}
+input{
+    font-size: 1em;
+    border-radius: 8px;
+    border: none;
+    color: var(--corDarckBlue);
+    margin-left: 10px;
+    margin-right: -2px;
+    padding: 2px;
+}
+div.campo > input{
+    width: 100%;
+    padding: 3px 9px;
+    margin: 0px;
+}
+div.campo > input#dataNasc{
+    text-align: center;
+    font-size: 1.2em;
+    width: 40%;
+}
+input.tecno, #sexoF, #sexoM{
+    width: 20px;
+}
+
+main input#tecnoOut{
+    width: 200px;
+    display: none;
+}
+main input#FC{
+    padding: 8px;
+
+    position: absolute;
+    transform: translate(-50%, -6%);
+    left: 50%;
+}
+input#FC:hover{
+    background-color: #99c1d1ea;
+    color: #000000;
+    padding: 9px;
+    border-radius: 10px;
+}
+
+main select, option{
+    padding: 3px 9px;
+    border-radius: 8px;
+    color: var(--corDarckBlue);
+}
+
+footer{
+    background: var(--corFundo);
+    text-align: center;
+    font-size: 0.9em;
+    padding: 10px;
+    margin-top: 20px;
+}
+footer a{
+    font-weight: bolder;
+    text-decoration: none;
+}
+a:hover{
+    background-color: #99c1d12c;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+section#fichaDeCadastro{
+    display: none;
+}
+
+section#fichaDeCadastro fieldset > legend{
+    text-align: center;
+}

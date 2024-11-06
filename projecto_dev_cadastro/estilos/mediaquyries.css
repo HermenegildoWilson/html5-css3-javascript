@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 400px) {
+    header>h1{
+        font-size: 2.2em;
+    }
+    fieldset legend{
+        font-size: 1.4em;
+        margin-left: 10px;
+    }
+    fieldset#dPessoais{
+        justify-content: space-evenly;
+    }
+    fieldset label{
+        font-size: 1.4em;
+    }
+    div.campo{
+        width: 50%;
+    }
+    div.campo > input#dataNasc{
+        width: auto;
+    }
+}
+@media screen and (min-width: 800px) {
+    main{
+        width: 780px;
+    }
+}
