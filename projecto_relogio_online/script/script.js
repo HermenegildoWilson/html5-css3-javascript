@@ -7,7 +7,6 @@ function carregar() {
     var corpo = document.body
     var conteudo = document.querySelector('body>main')
      
-    hora = 20
     if (hora >= 6 && hora <= 12) {
         msg.innerHTML = `Bom dia! São ${hora} horas`
         img.style.backgroundImage = 'url(img/img01-dia.png)'
