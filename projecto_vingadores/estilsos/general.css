@@ -9,131 +9,78 @@
     src: url(../fontes/MPLUSRounded1c-Light.ttf);
 }
 
-:root{
-    --font-p: 'padrao', Arial, Helvetica, sans-serif;
-    --font-t: 'titulos', Arial, Helvetica, sans-serif;
-}
-
 *{
-    margin: 0px;
+    font-family: 'padrao';
     padding: 0px;
-    font-family: var(--font-p);
+    margin: 0px;
     box-sizing: border-box;
-    transition: .5s;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-}
-header{
-    background-color: black;
-    color: white;
-    width: 100vw;
-    height: 200px;
-}
-header > section#cab-nav{
-    position: relative;
-    background-color: black;
-    padding: 15px;
-    height: 35%;
-    margin-bottom: 10px;
-}
-header > section#cab-nav > div#logo-avengers{
-    background: black url(../imagens/avengers-logo.png) no-repeat center center;
-    background-size: contain;
-    display: inline-block;
-    width: 100%;
-    height: 65%;
-} 
-header > section#cab-nav > nav#menu{
-    display: inline-block;
-    width: 100%;
-    height: 35%;
-    text-align: left;
-}
-header > section#cab-nav > nav#menu > a{
-    display: inline-block;
-    background-color: #d3d3d32e;
-    color: white;
-    font-size: 1em;
-    text-decoration: none;
-    padding: 4px;
-    border-radius: 8px;
-}
-header > section#cab-nav > nav#menu > a:hover{
-    background-color: #d3d3d363;
-}   
-
-header > section#banner{
-    position: relative;
-    background: black url(../imagens/banner.jpg) no-repeat center center;
-    background-size: cover;
-    height: 60%;
-}
-header > section#banner > h1{
-    font-family: var(--font-t);
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 5px;
-}
-
-h2{
-    font-family: var(--font-t);
-    padding: 5px;
-    text-align: left;
-}
-h2 > i{
-    font-family: var(--font-t);
-    font-style: normal;
-    color: red;
-}
-main{
-    padding: 10px;
-}
-
-main > section#galeria > div#imagens {
-    margin: auto;
-    width: 300px;
-}
-main > section#galeria > div#imagens > div{
-    display: inline-block;
-    width: 146px;
-}
-main > section#galeria > div#imagens > div#last01{
-    width: 300px;
-}
 img{
     width: 100%;
 }
 
-footer{
+body{
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
-footer > section{
-    text-align: center;
+
+header, footer{
+    display: flex;
+    flex-flow: column wrap;
 }
-footer > section > p{
-    text-align: justify;
-    display: inline-block;
-    width: 300px;
+
+header > div#logo{
+    background: url(../img/avengers-logo.png) center center no-repeat;
+    background-size: contain;
+    height: 90px;
+
+    flex: auto;
 }
-footer > section > img{
-    display: inline-block;
-    width: 50%;
+header > nav{
+
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-footer > aside {
-    text-align: center;
-    padding: 20px;
-}
-a{
+header > nav > a{
+    background-color: #80808049;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
     text-decoration: none;
 }
-a:hover{
-    background-color: #d3d3d30c;
-    border-radius: 3px;
-    text-decoration: underline;
+header > div#banner{
+    background: url(../img/Sbanner.jpg) center center no-repeat;
+    background-size: cover;
+    height: 200px;
+
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+h2::before{
+    color: red;
+    font-weight: bold;
+    content: "| ";
+}
+
+main{
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+main > section#galeria{
+    display: flex;
+    flex-flow: row wrap;
+}
+main > section#galeria > h2{
+    
 }
