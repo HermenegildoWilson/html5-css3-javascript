@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'fonte';
+    src: url(../fontes/MPLUSRounded1c-Light.ttf);
+}
+
+:root{
+    --cor01: #1f1517;
+    --cor02: #fff2e780;
+    --cor03: #181012;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+ 
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+    font-family: 'fonte';
+}
+
+body{
+    background: var(--cor01);
+}
+
+header > nav{
+    max-width: 1120px;
+    padding: 14px;
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+header > nav > span.logo{/*FONT TEKO*/
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+header > nav > ul.menu{
+    display: flex;
+    
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+header > nav > ul.menu > li > a{
+    color: var(--cor02);
+}
+header > nav > a.githab{
+    color: #fff2e7;
+    font-weight: bold;
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+main > section.hero{
+    background-color: var(--cor03);
+    max-width: 1120px;
+    height: 60vh;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 4em;
+}
+main > section.hero > header.hero-cabeçalho{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+main > section.hero > div.imagens{
+    max-width: 45%;
+    column-count: 4;
+}
+main > section.hero > div.imagens > figure >img{
+    width: 50%;
+    border-radius: 8px;
+}
