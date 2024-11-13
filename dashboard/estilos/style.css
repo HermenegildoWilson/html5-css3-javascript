@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'fonte';
-    src: url(../fontes/MPLUSRounded1c-Light.ttf);
+    font-family: 'padrão';
+    src: url(../fontes/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+    font-family: 'titulos';
+    src: url(../fontes/Teko/Teko-VariableFont_wght.ttf);
 }
 
 :root{
@@ -19,7 +23,7 @@
     text-decoration: none;
     list-style: none;
     color: #ffffff;
-    font-family: 'fonte';
+    font-family: 'padrão';
 }
 
 body{
@@ -28,6 +32,7 @@ body{
 
 header > nav{
     max-width: 1120px;
+    font-family: 'titulos';
     padding: 14px;
     margin: auto;
 
@@ -37,7 +42,8 @@ header > nav{
     align-items: center;
     gap: 1em;
 }
-header > nav > span.logo{/*FONT TEKO*/
+header > nav > span.logo{
+    font-family: 'titulos';
     font-weight: bold;
     font-size: 2em;
     text-transform: uppercase;
@@ -50,6 +56,7 @@ header > nav > ul.menu{
     gap: 1em;
 }
 header > nav > ul.menu > li > a{
+    font-family: 'titulos';
     color: var(--cor02);
 }
 header > nav > a.githab{
@@ -69,7 +76,7 @@ main > section.hero{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    gap: 4em;
+    gap: 1em;
 }
 main > section.hero > header.hero-cabeçalho{
     display: flex;
@@ -79,7 +86,7 @@ main > section.hero > header.hero-cabeçalho{
 }
 
 main > section.hero > div.imagens{
-    max-width: 45%;
+    max-width: 50%;
     column-count: 4;
 }
 main > section.hero > div.imagens > figure >img{

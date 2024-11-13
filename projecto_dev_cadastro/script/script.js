@@ -19,7 +19,7 @@ function fazerCadastro() {
     }
 
     let tipoDev = document.getElementsByName('tipoDev')
-    for(let i = 0; i < 2; i++){
+    for(let i = 0; i < 3; i++){
         if(tipoDev[i].checked){
             tipoDev = 'Front-Hand'
         }else if(tipoDev[i].checked){
