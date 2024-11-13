@@ -11,7 +11,7 @@ function fazerCadastro() {
     
     let sexo = document.getElementsByName('sexo')
     for(let i = 0; i < 2; i++){
-        if (sexo[0].checked) {
+        if (sexo[i].checked) {
             sexo = 'Masculino'
         }else if (sexo[i].checked) {
             sexo = 'Feminino'
@@ -20,11 +20,11 @@ function fazerCadastro() {
 
     let tipoDev = document.getElementsByName('tipoDev')
     for(let i = 0; i < 3; i++){
-        if(tipoDev[i].checked){
+        if(tipoDev[0].checked){
             tipoDev = 'Front-Hand'
-        }else if(tipoDev[i].checked){
+        }else if(tipoDev[1].checked){
             tipoDev = 'Back-Hand'
-        }else if(tipoDev[i].checked){
+        }else if(tipoDev[2].checked){
             tipoDev = 'Full-Stack'
         }
     }
