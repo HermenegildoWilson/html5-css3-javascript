@@ -1,83 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="estilos/style.css">
+    <title>WilsonCoffe</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 <body>
-    <header>
-         <nav>
-            <span class="logo">WilsonCoffe</span>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Receitas</a></li>
-                <li><a href="#">Novidades</a></li>
-                <li><a href="#">Melhor avaliados</a></li>
+    <header id="cabecalho">
+        <h1 id="cabecalho-titulo">wilson-coffe</h1>
+        <a href="#" id="cabecalho-iconeGit">GitHub</a>
+        <nav id="cabecalho-menu">
+            <ul>
+                <li>Home</li>
+                <li>Receitas</li>
+                <li>Novidades</li>
+                <li>Melhor avaliados</li>
             </ul>
-            <a href="#" class="githab">Github</a>
-         </nav>
+        </nav>
+        <button>MENU</button>
     </header>
-
-    <main>
-        <section class="hero"> <!--Secção para o hero que é a parte mais importante de uma landing page-->
-            <header class="hero-cabeçalho">
-                <span>novidade</span>
-                <h1>Encontre a receita perfeita!</h1>
-                <hr style="width: 100%;">
-                <h2>
-                    Explore dezenas de variações de bebidas favoritas entre os devs ao redor do mundo!
-                </h2>
+    <main id="conteudo">
+        <section id="hero">
+            <header id="hero-cabecalho">
+                <span class="destaque">novidades</span>
+                <h2>Encontre a receita perfeita</h2>
+                <hr>
+                <p>
+                    Explore dezenas de variações da bebida favorita entre os <strong>dev's</strong> ao redor do mundo!
+                </p>
             </header>
-            <div class="imagens">
-                 <figure><img src="img/image 10.png"></figure>
-                 <figure><img src="img/image 11.png"></figure>
-                 <figure><img src="img/image 12.png"></figure>
-                 <figure><img src="img/image 13.png"></figure>
-                 <figure><img src="img/image 14.png"></figure>
-                 <figure><img src="img/image 15.png"></figure>
-                 <figure><img src="img/image 16.png"></figure>
-                 <figure><img src="img/image 17.png"></figure>
-                 <figure><img src="img/image 18.png"></figure>
-                 <figure><img src="img/image 10.png"></figure>
-                 <figure><img src="img/image 10.png"></figure>
-                 <figure><img src="img/image 10.png"></figure>
-            </div>
+            <main id="hero-conteudo">
+                <figure><img src="img/image 07.png" alt="Imagem 8"></figure>
+                <figure><img src="img/image 08.png" alt="Imagem 8"></figure>
+                <figure><img src="img/image 09.png" alt="Imagem 9"></figure>
+                <figure><img src="img/image 10.png" alt="Imagem 10"></figure>
+                <figure><img src="img/image 11.png" alt="Imagem 11"></figure>
+                <figure><img src="img/image 12.png" alt="Imagem 12"></figure>
+                <figure><img src="img/image 13.png" alt="Imagem 13"></figure>
+                <figure><img src="img/image 14.png" alt="Imagem 14"></figure>
+                <figure><img src="img/image 15.png" alt="Imagem 15"></figure>
+                <figure><img src="img/image 16.png" alt="Imagem 16"></figure>
+                <figure><img src="img/image 17.png" alt="Imagem 17"></figure>
+                <figure><img src="img/image 18.png" alt="Imagem 18"></figure>
+            </main>
         </section>
         <section>
-            <button>
-                <figure><img src="img/Button.jpg" alt="Botão"></figure>
-            </button>
-        </section>
-        <section>
-            <header>
-                <span>receitas</span>
-                <h2>Confira as últimas receitas</h2>
-                <p>Dê uma olhada nas receitas mais amadas!</p>
-            </header>
             <div>
-                <div>
-                    <header>
-                        <div>
-                            <span>em alta 🔥</span>
-                            <h3>Cappuccinho</h3>
-                        </div>
-                        <p>Extraordinário - 4/4</p>
-                    </header>
-                    <p>Uma bebida ideal para os amantes de doce e cremosidade. 😍</p>
-                    <div>
-                        <img src="img/img01.png" alt="Autor">
-                        <span>Hermenegildo Wilson</span>
-                    </div>
-                </div>
+                <span class="destaque">receitas</span>
+                <h2>Confira as últimas receitas</h2>
+                <p>Dê uma olhada nas receitas mais amadas</p>
+            </div>
+            <div>
+                <span class="destaque">em alta</span>
+                <h3>Cappuchine</h3>
+                <p>Extraordinário</p>
+                <p>Uma bebida ideal para os amantes de doce e cremosidade</p>
+                <aside>
+                    <img src="img/image 12.png" alt="Foto-Autor">
+                    <p>Hermenegildo Panzo</p>
+                </aside>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>Copyrigth &lt;CODEFEE/&gt; 2024</p>
-        <p>Feito com muito 🖤 e caffe por Hermenegildo Wilson</p>
-    </footer>
 </body>
 </html>

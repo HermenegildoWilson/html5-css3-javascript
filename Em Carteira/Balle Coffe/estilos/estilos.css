@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'inter';
+    src: url(../fontes/Inter-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+    font-family: 'teko';
+    src: url(../fontes/Teko-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'montserrat';
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+}
+
+:root{
+    --fontPadrao: 'montserrat';
+    --fontTitulos: 'inter';
+    --fontDestaque: 'teko';
+
+    --corFundoF: #241a1b;
+    --corFundoS: #38292b;
+    --corFundoN:#4b322e;
+    --corTexto: #a05b4b;
+    --corTextoL: #e9dfdd;
+}
+
+*{
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body, html{
+    font-family: var(--fontPadrao);
+    font-size: 1em;
+}
+
+header#cabecalho{
+    background: var(--corFundoF);
+    color: #c9b5b0;
+    padding: 10px;
+
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-areas: 
+    'cabeca icone'
+    'menu botao';
+}
+header > h1#cabecalho-titulo{
+    grid-area: cabeca;
+
+    text-transform: uppercase;
+    font-family: var(--fontDestaque);
+}
+header > a#cabecalho-iconeGit{
+    grid-area: icone;
+    color: var(--corTextoL);
+    font-family: var(--fontTitulos);
+}
+header > nav#cabecalho-menu{
+    grid-area: menu;
+}
+header > nav#cabecalho-menu > ul{
+    grid-area: menu;
+
+    display: flex;
+    gap: 16px;
+}
+header#cabecalho > button{
+    grid-area: botao;
+}
+
+main#conteudo{
+    background: var(--corFundoS);
+    padding-top: 20px;
+
+    display: flex;
+    flex-flow: column;
+}
+
+main > section#hero{
+    margin: auto;
+    width: 80vw;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 15px;
+}
+main > section#hero > header#hero-cabecalho{
+    flex: 1 0 220px;
+}
+.destaque{
+    color: var(--corTexto);
+    font-size: .8em;
+}
+main > section#hero > header#hero-cabecalho > h2{
+    color: var(--corTextoL);
+    width: 200px;
+    flex: 0 0;
+}
+main > section#hero > main#hero-conteudo{
+    column-count: 4;
+    flex: 1 0 250px;
+}
+main > section#hero > main#hero-conteudo > figure > img{
+    width: 100%;
+}
