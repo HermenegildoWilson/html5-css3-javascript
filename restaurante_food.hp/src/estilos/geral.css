@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'monserrat';
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'monserrat';
+    transition: .2s;
+}
+img{
+    width: 60px;
+}
+
+body{
+    background-color: #fff9ea;
+}

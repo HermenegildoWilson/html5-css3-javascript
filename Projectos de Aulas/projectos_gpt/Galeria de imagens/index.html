@@ -93,21 +93,20 @@ header {
 
     <script>
         // script.js
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const galleryItems = document.querySelectorAll(".gallery-item");
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+        const galleryItems = document.querySelectorAll(".gallery-item");
 
-galleryItems.forEach(item => {
-    item.onclick = () => {
-        modal.style.display = "flex";
-        modalImg.src = item.src;
-    };
-});
+        galleryItems.forEach(item => {
+            item.onclick = () => {
+                modal.style.display = "flex";
+                modalImg.src = item.src;
+            };
+        });
 
-document.querySelector(".close").onclick = () => {
-    modal.style.display = "none";
-};
-
+        document.querySelector(".close").onclick = () => {
+            modal.style.display = "none";
+        };
     </script>
 </body>
 </html>

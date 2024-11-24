@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+header > nav.navegacao{
+    background-color: #ffa5001a;
+    padding: 20px 60px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+button.btn-menu > span.linha{
+    position: relative;
+    left: 82%;
+    background-color: #ccccccb0;
+    width: 35px;
+    height: 3px;
+    display: block;
+    margin: 8px;
+    border-radius: 8px;
+    transform-origin: center;
+    transition: .4s;
+}
+button.clicando .linha:nth-child(1){
+    transform: translateY(10px) rotate(40deg);
+    box-shadow: 2px 2px 5px #0000001a;
+}
+button.clicando .linha:nth-child(2){
+    width: 0;
+}
+button.clicando .linha:nth-child(3){
+    transform: translateY(-10px) rotate(-40deg);
+    box-shadow: 2px 2px 5px #0000001a;
+}
+
+ul.navegacao-menu{
+    list-style: none;
+    grid-column: span 2;
+    
+    flex-flow: column;
+    gap: 6px;
+    align-items: center;
+}
+ul, nav.navegacao > div{
+    display: none;
+}
+
+a, button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1d1d1dad;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+ul.navegacao-menu > li > a:hover{
+    background-color: #ffa5001a;
+    scale: 1.1;
+}
+ul.show-menu{
+    display: flex;
+}
+
+nav.navegacao > div{
+    grid-column: span 2;
+    text-align: center;
+}
+nav.navegacao > div.show-btn{
+    display: block;
+}
+button.btn-default{
+    align-self: center;
+    width: 105px;
+    background-color: #ffa500;
+    box-shadow: 0px 0px 10px 2px #0000001a;
+    animation-name: animar-botao;
+    animation-duration: .8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+button.btn-default:hover{
+    background-color: #f8b02a;
+    scale: 1.1;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1; 
+}
+@keyframes animar-botao {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.1;
+    }
+}
+
+/*Configurações para telas maiores*/
+@media screen and (min-width: 700px) {
+    header > nav.navegacao{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header button.btn-menu{
+        display: none;
+    }
+    nav.navegacao > div{
+        grid-column: span 1;
+        text-align: right;
+    }
+    ul.navegacao-menu{
+        padding: 10px;
+        list-style: none;
+
+        grid-column: span 1;
+
+        display: flex;
+        flex-flow: row;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+    }
+}

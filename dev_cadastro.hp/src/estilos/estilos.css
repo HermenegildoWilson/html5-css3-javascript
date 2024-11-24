@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'monserrat';
+    src: url(../fontes/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'bebas';
+    src: url(../fontes/BebasKai.ttf);
+}
+
+:root{
+    --fontMonserrat: 'monserrat';
+    --fontBebas: 'bebas';
+
+    --cor01: #3bacd9;
+    --cor02: #3299d9;
+    --cor03: #308ad9;
+    --cor04: #4ad97c;
+    --cor05: #f2bc57;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: var(--fontMonserrat);
+}
+
+body{
+    background: linear-gradient(48deg, var(--cor03), #8fc4da60);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.corpo{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    width: 75vw;
+    padding: 4px;
+}
+
+header.cabecalho{
+    background-color: var(--cor0);
+    height: 20vh;
+    padding: 18px;
+    display: grid;
+    gap: 10px;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+header.cabecalho > h1{
+    padding-left: 10px;
+    align-self: flex-end;
+    color: black;
+    text-shadow: 1px 1px 1px #00000021;
+}
+header.cabecalho > nav{
+    text-align: right;
+    padding-right: 10px;
+}
+header.cabecalho > nav > a{
+    display: inline-block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main.conteudo{
+    padding: 10px;
+    height: 65vh;
+    display: grid;
+}
+section.hero-cabecalho{
+    padding: 15px;
+}
+section.hero-cabecalho > h2{
+    align-self: flex-start;
+}
+section.hero-cabecalho > p{
+    width: 100%;
+}
