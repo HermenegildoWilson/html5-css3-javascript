@@ -1,11 +1,24 @@
 @charset "UTF-8";
 
+header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #ffffff;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.103);
+    box-shadow: 0px 0px 6px 0px #0000001a;
+}
+
 header > nav.navegacao{
     background-color: #ffa5001a;
-    padding: 20px 60px;
+    padding: 20px 30px;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+}
+
+header img{
+    width: 60px;
 }
 
 button.btn-menu > span.linha{
@@ -37,7 +50,7 @@ ul.navegacao-menu{
     grid-column: span 2;
     
     flex-flow: column;
-    gap: 6px;
+    gap: 0px;
     align-items: center;
 }
 ul, nav.navegacao > div{
@@ -52,12 +65,14 @@ a, button{
     text-decoration: none;
     color: #1d1d1dad;
     display: inline-block;
-    padding: 8px 12px;
     border-radius: 5px;
 }
 ul.navegacao-menu > li > a:hover{
     background-color: #ffa5001a;
     scale: 1.1;
+}
+ul > li > a{
+    padding: 8px 12px;
 }
 ul.show-menu{
     display: flex;
@@ -74,6 +89,8 @@ button.btn-default{
     align-self: center;
     width: 105px;
     background-color: #ffa500;
+    padding: 8px 12px;
+    margin-top: 10px;
     box-shadow: 0px 0px 10px 2px #0000001a;
     animation-name: animar-botao;
     animation-duration: .8s;
@@ -93,31 +110,5 @@ button.btn-default:hover{
     }
     100%{
         scale: 1.1;
-    }
-}
-
-/*Configurações para telas maiores*/
-@media screen and (min-width: 700px) {
-    header > nav.navegacao{
-        grid-template-columns: repeat(3, 1fr);
-    }
-    header button.btn-menu{
-        display: none;
-    }
-    nav.navegacao > div{
-        grid-column: span 1;
-        text-align: right;
-    }
-    ul.navegacao-menu{
-        padding: 10px;
-        list-style: none;
-
-        grid-column: span 1;
-
-        display: flex;
-        flex-flow: row;
-        gap: 6px;
-        justify-content: center;
-        align-items: center;
     }
 }
